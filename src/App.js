@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar/Sidebar';
 import Header from './components/Header/Header';
 import AnatomySection from './components/DashboardMainContent/DashboardOverview/AnatomySection/AnatomySection';
 import CalendarView from './components/DashboardMainContent/CalendarView/CalendarView';
-//import DashboardOverview from './components/DashboardMainContent/DashboardOverview/DashboardOverview';
 import UpcomingSchedule from './components/DashboardMainContent/UpcomingSchedule/UpcomingSchedule';
 import ActivityFeed from './components/DashboardMainContent/ActivityFeed/ActivityFeed';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Listen for resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="dashboard-container">
       <Sidebar />
@@ -19,11 +35,12 @@ function App() {
         <div className="dashboard-grid">
           <div className="left-column">
             <AnatomySection />
-            <ActivityFeed/>
+            {!isMobile && <ActivityFeed />}
           </div>
           <div className="right-column">
             <CalendarView />
             <UpcomingSchedule />
+            {isMobile && <ActivityFeed />}
           </div>
         </div>
       </main>
