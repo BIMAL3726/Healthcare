@@ -119,6 +119,9 @@
   .calendar-appointments {
     flex-direction: column;
   }
+  .calendar-view{
+    width:100%;
+  }
 
   .appointment-card {
     max-width: 100%;
