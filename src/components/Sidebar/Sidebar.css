@@ -1,3 +1,4 @@
+/* --------- Desktop Sidebar --------- */
 .sidebar {
   width: 260px;
   background-color: #ffffff;
@@ -9,6 +10,7 @@
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   height: 122vh;
+  transition: transform 0.3s ease;
 }
 
 .logo {
@@ -16,11 +18,11 @@
   font-weight: bold;
   padding: 0 1rem 2rem;
 }
-
 .logo-highlight {
   color: #00c3ff;
 }
 
+/* --------- Navigation --------- */
 .section-title {
   font-size: 0.9rem;
   font-weight: 500;
@@ -45,12 +47,10 @@
   cursor: pointer;
   color: #333;
 }
-
 .sidebar-item:hover {
   background-color: #eef6fd;
   color: #007bff;
 }
-
 .icon {
   margin-right: 10px;
   font-size: 1.1rem;
@@ -62,7 +62,7 @@
   padding-top: 1rem;
 }
 
-/* Sidebar Toggle Button */
+/* --------- Toggle Button --------- */
 .menu-button {
   font-size: 1.2rem;
   background: none;
@@ -73,7 +73,7 @@
   z-index: 1001;
 }
 
-/* Mobile Responsive Styles */
+/* --------- Mobile Styles --------- */
 @media (max-width: 768px) {
   .menu-button {
     display: block;
@@ -86,13 +86,13 @@
   }
 
   .sidebar {
-    transform: translateX(-100%);
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
+    width: 260px;
+    transform: translateX(-100%);
     z-index: 1000;
-    transition: transform 0.3s ease;
   }
 
   .sidebar.open {
