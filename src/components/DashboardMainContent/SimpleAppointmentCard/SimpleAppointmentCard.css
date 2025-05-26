@@ -1,0 +1,26 @@
+.appointment-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #eef6fd;
+  border-radius: 16px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pill-icon {
+  color: #00c3ff;
+  font-size: 1.2rem;
+}
+
+.appointment-details h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.appointment-details p {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}

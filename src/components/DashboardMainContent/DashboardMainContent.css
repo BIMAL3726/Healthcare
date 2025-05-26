@@ -1,0 +1,7 @@
+.dashboard-main {
+  padding: 1rem;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
