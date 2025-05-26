@@ -75,6 +75,20 @@
   }
 
   .activity-bars {
-    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .bar {
+    width: 5px;
+  }
+
+  .bars {
+    gap: 0.2rem;
+  }
+  .activity-section{
+    height: 80vh;
   }
 }
+

@@ -63,4 +63,7 @@
   .appointment-pill {
     width: 80%;
   }
+  .upcoming-section{
+    height: 90vh;
+  }
 }
